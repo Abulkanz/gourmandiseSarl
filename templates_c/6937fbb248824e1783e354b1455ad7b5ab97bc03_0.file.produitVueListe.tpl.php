@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-01-31 16:29:16
+/* Smarty version 3.1.29, created on 2017-02-01 16:07:36
   from "C:\Wamp64\www\gourmandiseSarl\vue\produitVueListe.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5890bb5c20c1b9_92183351',
+  'unifunc' => 'content_589207c88f7e23_61539615',
   'file_dependency' => 
   array (
     '6937fbb248824e1783e354b1455ad7b5ab97bc03' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandiseSarl\\vue\\produitVueListe.tpl',
-      1 => 1485880136,
+      1 => 1485965252,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5890bb5c20c1b9_92183351 ($_smarty_tpl) {
+function content_589207c88f7e23_61539615 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +33,7 @@ function content_5890bb5c20c1b9_92183351 ($_smarty_tpl) {
         <div class="conteneur">
             <header><h1 class="center groTit"><?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 </h1></header>
+            <a class="lienAcc" href="./index.php">Accueil</a>
             <table>
                 <tr>
                     <th>Reference</th>
@@ -58,9 +59,20 @@ $__foreach_Produit_0_saved_local_item = $_smarty_tpl->tpl_vars['Produit'];
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['Produit']->value['prix_unitaire_HT'];?>
 </td>
-                        <td><form method='POST' action='vue/produitVueConsult.php'>
-                                <input type='submit' name='consulter' value='C'><input type='hidden' name='id' value=<?php echo $_smarty_tpl->tpl_vars['Produit']->value['reference'];?>
->
+                        <td>
+                            <form method='POST' action='index.php'>
+                                <input type='submit' name='consulter' value='C'>
+                                <input type="hidden" name="gestion" value="produit">
+                                <input type='hidden' name='reference' value="<?php echo $_smarty_tpl->tpl_vars['Produit']->value['reference'];?>
+">
+                                <input type="hidden" name="action" value="consulter">
+                            </form>
+                            <form method='POST' action='index.php'>
+                                <input type='submit' name='modifier' value='M'>
+                                <input type="hidden" name="gestion" value="produit">
+                                <input type='hidden' name='reference' value="<?php echo $_smarty_tpl->tpl_vars['Produit']->value['reference'];?>
+">
+                                <input type="hidden" name="action" value="modifier">
                             </form>
                         </td>
                     </tr>

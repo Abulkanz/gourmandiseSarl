@@ -7,9 +7,15 @@ function liste(){
     require_once 'vue/produitVueListe.php';
 }
 
-function consulter(){
-    $idRequete = consulterProduit();
+function consulter($param){
+    $reference = $param['reference'];
+    $idRequete = consulterProduit($reference);
     require_once 'vue/produitVueConsult.php';
 }
 
+function modifier($param){
+    $reference = $param['reference'];
+    $idRequete = modifierProduit($reference);
+    require_once 'vue/produitVueModif.php';
+}
 

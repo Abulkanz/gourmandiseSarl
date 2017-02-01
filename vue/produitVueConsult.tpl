@@ -16,11 +16,13 @@
                     <th>Prix Unitaire Hors Taxe</th>
                 </tr>
                 <tr>
-                    <td>{$Produit.reference}</td>
-                    <td>{$Produit.designation}</td>
-                    <td>{$Produit.prix_unitaire_HT}</td>
+                    <td>{$reference}</td>
+                    <td>{$designation}</td>
+                    <td>{$prix_unitaire_HT}</td>
                 </tr>
             </table>
+            <a class="lienAcc" href="./index.php">Accueil</a>
         </div>
+        
     </body>
 </html>

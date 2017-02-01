@@ -24,10 +24,11 @@ if (isset($_POST['ajouter'])) {
     ajouter();
 } elseif (isset($_POST['valider'])) {
     valider();
-} elseif (isset($_POST['C'])) {
-    consulter();
+} elseif (isset($_POST['modifier'])) {
+    modifier();
+} elseif (isset($_POST['consulter'])) {
+    consulter($_POST);
 } else {
     liste();
 }
-
 

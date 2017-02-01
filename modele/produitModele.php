@@ -10,10 +10,11 @@ function listeProduits() {
     return $idRequete;
 }
 
-function consulterProduit() {
+function consulterProduit($reference) {
     $cnx = getBD();
-    $sql = "SELECT * FROM auteur WHERE reference =" . $row['$reference'] ."";
-    $idRequete = executeR($cnx, $sql, array($row["$reference"]));
+    $sql = "SELECT * FROM produit WHERE reference = ?";
+    $idRequete = executeR($cnx, $sql, array($reference));
+    return $idRequete;
 }
-?>
+
 
