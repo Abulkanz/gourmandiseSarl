@@ -19,3 +19,7 @@ function modifier($param){
     require_once 'vue/produitVueModif.php';
 }
 
+function ajouter(){
+    $idRequete = ajouterProduit();
+    require_once 'vue/produitVueAjout.php';
+}

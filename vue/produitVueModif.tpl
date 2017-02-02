@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Formulaire Modification</title>
-        <link href="../css/template.css" rel="stylesheet" type="text/css"/>
+        <link href="style/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="conteneur">

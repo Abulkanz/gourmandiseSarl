@@ -4,7 +4,7 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="template/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="style/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="conteneur">
@@ -38,6 +38,11 @@
                     </tr>
                 {/foreach}
             </table>
+            <form>
+                <input type='submit' name='ajouter' value='Ajouter un produit'>
+                <input type="hidden" name="gestion" value="produit">
+                <input type="hidden" name="action" value="ajouter">
+            </form>
         </div>
     </body>
 </html>

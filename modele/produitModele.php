@@ -17,4 +17,7 @@ function consulterProduit($reference) {
     return $idRequete;
 }
 
-
+function ajouterProduit($_POST){
+    $cnx = getBD();
+    $_POST['designation'];
+}

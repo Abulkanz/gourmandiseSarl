@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-01 16:07:36
+/* Smarty version 3.1.29, created on 2017-02-02 09:03:10
   from "C:\Wamp64\www\gourmandiseSarl\vue\produitVueListe.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589207c88f7e23_61539615',
+  'unifunc' => 'content_5892f5cee901c1_33755447',
   'file_dependency' => 
   array (
     '6937fbb248824e1783e354b1455ad7b5ab97bc03' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandiseSarl\\vue\\produitVueListe.tpl',
-      1 => 1485965252,
+      1 => 1486026177,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589207c88f7e23_61539615 ($_smarty_tpl) {
+function content_5892f5cee901c1_33755447 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,7 @@ function content_589207c88f7e23_61539615 ($_smarty_tpl) {
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="template/styles.css" rel="stylesheet" type="text/css"/>
+        <link href="style/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="conteneur">
@@ -84,6 +84,11 @@ $_smarty_tpl->tpl_vars['Produit'] = $__foreach_Produit_0_saved_item;
 }
 ?>
             </table>
+            <form>
+                <input type='submit' name='ajouter' value='Ajouter un produit'>
+                <input type="hidden" name="gestion" value="produit">
+                <input type="hidden" name="action" value="ajouter">
+            </form>
         </div>
     </body>
 </html>
