@@ -22,12 +22,14 @@ switch ($gestion) {
 
 if (isset($_POST['ajouter'])) {
     ajouter($_POST);
-} elseif (isset($_POST['valider'])) {
-    valider();
+} elseif (isset($_POST['ajouterProduit'])) {
+    ajouterProduit($_POST);
 } elseif (isset($_POST['modifier'])) {
     modifier();
 } elseif (isset($_POST['consulter'])) {
     consulter($_POST);
+} elseif (isset($_POST['supprimer'])) {
+    supprimer($_POST);
 } else {
     liste();
 }

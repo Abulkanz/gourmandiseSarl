@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-02 09:03:10
+/* Smarty version 3.1.29, created on 2017-02-02 15:44:15
   from "C:\Wamp64\www\gourmandiseSarl\vue\produitVueListe.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5892f5cee901c1_33755447',
+  'unifunc' => 'content_589353cfc26d41_71803569',
   'file_dependency' => 
   array (
     '6937fbb248824e1783e354b1455ad7b5ab97bc03' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandiseSarl\\vue\\produitVueListe.tpl',
-      1 => 1486026177,
+      1 => 1486050253,
       2 => 'file',
     ),
   ),
@@ -19,18 +19,23 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5892f5cee901c1_33755447 ($_smarty_tpl) {
+function content_589353cfc26d41_71803569 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Liste Produits</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="conteneur">
+            <br>
+            <?php if ($_smarty_tpl->tpl_vars['success']->value == '1') {?>
+                <div class="succes"><h3 class="mSucces">Bravo</h3></div>
+            <?php } else { ?>
+            <?php }?>
             <header><h1 class="center groTit"><?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 </h1></header>
             <a class="lienAcc" href="./index.php">Accueil</a>
@@ -74,6 +79,13 @@ $__foreach_Produit_0_saved_local_item = $_smarty_tpl->tpl_vars['Produit'];
 ">
                                 <input type="hidden" name="action" value="modifier">
                             </form>
+                                <form method='POST' action='index.php'>
+                                <input type='submit' name='supprimer' value='S'>
+                                <input type="hidden" name="gestion" value="produit">
+                                <input type='hidden' name='reference' value="<?php echo $_smarty_tpl->tpl_vars['Produit']->value['reference'];?>
+">
+                                <input type="hidden" name="action" value="supprimer">
+                            </form>
                         </td>
                     </tr>
                 <?php
@@ -84,10 +96,11 @@ $_smarty_tpl->tpl_vars['Produit'] = $__foreach_Produit_0_saved_item;
 }
 ?>
             </table>
-            <form>
-                <input type='submit' name='ajouter' value='Ajouter un produit'>
+            <br>
+            <form method="POST" action="index.php" class="center">
                 <input type="hidden" name="gestion" value="produit">
                 <input type="hidden" name="action" value="ajouter">
+                <input type='submit' name='ajouter' value='Ajouter un produit'>
             </form>
         </div>
     </body>

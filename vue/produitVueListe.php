@@ -18,6 +18,12 @@ $nbLignes = $idRequete->rowCount();
 $tpl->assign('msg','Liste des produits');
 $tpl->assign('nbLignes', $nbLignes);
 $tpl->assign('listeProduits', $listeProduits);
+
+if (!empty($_GET['success'])) {
+    $tpl->assign('success', $_GET['success']);
+} else {
+    $tpl->assign('success', '0');
+}
+
 $tpl->display('vue/produitVueListe.tpl');
 
-?>
