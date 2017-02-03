@@ -9,6 +9,7 @@
     <body>
         <div class="conteneur">
             <header><h1 class="center groTit">{$msg}</h1></header>
+            <br>
             <table class="pUnique">
                 <tr>
                     <th>Reference</th>

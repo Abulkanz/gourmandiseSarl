@@ -12,8 +12,7 @@ $tpl->assign('libQuantiteStock', 'Stock :');
 $tpl->assign('libQuantiteConditionne', 'Quantité');
 $tpl->assign('libPoidsOuNbPieces', 'Poids pièce');
 $tpl->assign('jsAlertStock', "<script>
-                                    var valStock = document.getElementsByClassName('stock').value;
-                                    alert(valStock);
+                                    var valStock = document.getElementById('stock').value;
                                     if (valStock === '0'){
                                     alert('Stock à zéro');
                                     }
