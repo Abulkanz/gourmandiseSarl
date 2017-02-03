@@ -12,11 +12,13 @@ $tpl->assign('libQuantiteStock', 'Stock :');
 $tpl->assign('libQuantiteConditionne', 'Quantité');
 $tpl->assign('libPoidsOuNbPieces', 'Poids pièce');
 $tpl->assign('jsAlertStock', "<script>
-                                    var valStock = document.getElementById('stock').value;
+                                    var valStock = document.getElementsByClassName('stock').value;
+                                    alert(valStock);
                                     if (valStock === '0'){
                                     alert('Stock à zéro');
                                     }
                               </script>");
+
 
 switch ($action) {
     case 'ajouter':
@@ -49,9 +51,13 @@ switch ($action) {
             $ficheProduit['poids_piece'] = $row['poids_piece'];
         }
 
+        $valReference = $ficheProduit['reference'];
+        $inputRef = '<input type="hidden" name="reference" value=' . $valReference . '>';
+
+
         $tpl->assign('libPieces', 'Pieces');
         $tpl->assign('libGrammes', 'Grammes');
-        $tpl->assign('valReference', $ficheProduit['reference']);
+        $tpl->assign('inputRef', $inputRef);
         $tpl->assign('valDesignation', $ficheProduit['designation']);
         $tpl->assign('valPrixUnitaireHT', $ficheProduit['prix_unitaire_HT']);
         $tpl->assign('valProduitPoidsOuLot', $ficheProduit['descriptif']);

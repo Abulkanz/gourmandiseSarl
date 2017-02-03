@@ -11,26 +11,32 @@
             <h1 class="center groTit">{$titre}</h1>
             <div style="margin: auto auto;">
                 <form method="POST" action="index.php">
-                    <input type="hidden" name="reference" value="{$valReference}">
+                    {$inputRef}
                     {$libDesignation}
+                    <br>
                     <input type="text" name="designation" value="{$valDesignation}">
                     <br><br>
                     {$libPrixUnitaireHT}
+                    <br>
                     <input type="number" name="prix_unitaire_HT" value="{$valPrixUnitaireHT}">
                     <br><br>
                     {$libProduitPoidsOuLot}
+                    <br>
                     <select class="descriptif" name="descriptif">
                         <option selected="selected" value="G">{$libGrammes}</option>
                         <option value="P">{$libPieces}</option>
                     </select>
                     <br><br>
                     {$libQuantiteStock}
-                    <input type="number" name="stock" value="{$valQuantiteStock}">
+                    <br>
+                    <input type="number" id="stock" name="stock" value="{$valQuantiteStock}">
                     <br><br>
                     {$libQuantiteConditionne}
+                    <br>
                     <input type="number" name="quantite" value="{$valQuantiteConditionne}">
                     <br><br>
                     {$libPoidsOuNbPieces}
+                    <br>
                     <input type="number" step="0.01" name="poids_piece" value="{$valPoidsOuNbPieces}">
                     <br><br>
                     <input type="hidden" name="gestion" value="produit">
