@@ -30,11 +30,11 @@ switch ($action) {
         $tpl->assign('valQuantiteStock', '0');
         $tpl->assign('valQuantiteConditionne', '0');
         $tpl->assign('valPoidsOuNbPieces', '0');
-
+        $tpl->assign('inputRef', '');
         $tpl->assign('titrePrincipal', 'Ajouter');
         $tpl->assign('titre', "Ajouter un produit");
-        $tpl->assign('ajouterProd', 'ajouterProduit');
-        $tpl->assign('ajouter', 'Ajouter');
+        $tpl->assign('confirmEdit', 'ajouterProduit');
+        $tpl->assign('editer', 'Ajouter');
 
         break;
     case 'modifier' :
@@ -67,8 +67,8 @@ switch ($action) {
 
         $tpl->assign('titrePrincipal', 'Modifier');
         $tpl->assign('titre', "Modifier un produit");
-        $tpl->assign('modifierProd', 'modifierProduit');
-        $tpl->assign('modifier', 'Modifier');
+        $tpl->assign('confirmEdit', 'modifierProduit');
+        $tpl->assign('editer', 'Modifier');
         break;
 }
 

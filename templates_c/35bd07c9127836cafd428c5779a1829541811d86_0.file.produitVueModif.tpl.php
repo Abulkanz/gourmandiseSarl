@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-03 15:44:04
+/* Smarty version 3.1.29, created on 2017-02-03 15:50:03
   from "C:\Wamp64\www\gourmandiseSarl\vue\produitVueModif.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5894a544330c84_43447715',
+  'unifunc' => 'content_5894a6aba2e512_44497287',
   'file_dependency' => 
   array (
     '35bd07c9127836cafd428c5779a1829541811d86' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandiseSarl\\vue\\produitVueModif.tpl',
-      1 => 1486136604,
+      1 => 1486136966,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5894a544330c84_43447715 ($_smarty_tpl) {
+function content_5894a6aba2e512_44497287 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,8 +80,8 @@ function content_5894a544330c84_43447715 ($_smarty_tpl) {
                     <br><br>
                     <input type="hidden" name="gestion" value="produit">
                     <input type="submit" name="retour" value="Annuler">
-                    <input type="submit" name="<?php echo $_smarty_tpl->tpl_vars['modifierProd']->value;?>
-" value="<?php echo $_smarty_tpl->tpl_vars['modifier']->value;?>
+                    <input type="submit" name="<?php echo $_smarty_tpl->tpl_vars['confirmEdit']->value;?>
+" value="<?php echo $_smarty_tpl->tpl_vars['editer']->value;?>
 ">
                 </form>
             </div>

@@ -15,7 +15,7 @@ function consulter($param) {
 
 function ajouter($param) {
     $action = $param['action'];
-    require_once 'vue/produitVueAjout.php';
+    require_once 'vue/produitVueModif.php';
 }
 
 function ajouterProduit($param) {

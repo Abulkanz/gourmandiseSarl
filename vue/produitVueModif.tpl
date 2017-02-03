@@ -41,7 +41,7 @@
                     <br><br>
                     <input type="hidden" name="gestion" value="produit">
                     <input type="submit" name="retour" value="Annuler">
-                    <input type="submit" name="{$modifierProd}" value="{$modifier}">
+                    <input type="submit" name="{$confirmEdit}" value="{$editer}">
                 </form>
             </div>
         </div>
