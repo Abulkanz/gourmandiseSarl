@@ -24,7 +24,7 @@
                     </select>
                     <br><br>
                     {$libQuantiteStock}
-                    <input type="number" name="stock" value="{$valQuantiteStock}">
+                    <input type="number" id="stock" name="stock" value="{$valQuantiteStock}">
                     <br><br>
                     {$libQuantiteConditionne}
                     <input type="number" name="quantite" value="{$valQuantiteConditionne}">
@@ -39,4 +39,5 @@
             </div>
         </div>
     </body>
+    {$jsAlertStock}
 </html>

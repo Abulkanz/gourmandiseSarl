@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-03 10:59:52
-  from "C:\Wamp64\www\gourmandiseSarl\vue\produitVueAjout.tpl" */
+/* Smarty version 3.1.29, created on 2017-02-03 11:03:06
+  from "C:\Wamp64\www\gourmandiseSarl\vue\produitVueModif.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589462a84f1530_12733812',
+  'unifunc' => 'content_5894636a17f230_31427568',
   'file_dependency' => 
   array (
-    '07bb4c2b0f17a0ddcadf278dd65b27624bf8259b' => 
+    '35bd07c9127836cafd428c5779a1829541811d86' => 
     array (
-      0 => 'C:\\Wamp64\\www\\gourmandiseSarl\\vue\\produitVueAjout.tpl',
-      1 => 1486119519,
+      0 => 'C:\\Wamp64\\www\\gourmandiseSarl\\vue\\produitVueModif.tpl',
+      1 => 1486119755,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589462a84f1530_12733812 ($_smarty_tpl) {
+function content_5894636a17f230_31427568 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +36,8 @@ function content_589462a84f1530_12733812 ($_smarty_tpl) {
 </h1>
             <div style="margin: auto auto;">
                 <form method="POST" action="index.php">
+                    <input type="hidden" name="reference" value="<?php echo $_smarty_tpl->tpl_vars['valReference']->value;?>
+">
                     <?php echo $_smarty_tpl->tpl_vars['libDesignation']->value;?>
 
                     <input type="text" name="designation" value="<?php echo $_smarty_tpl->tpl_vars['valDesignation']->value;?>
@@ -57,7 +59,7 @@ function content_589462a84f1530_12733812 ($_smarty_tpl) {
                     <br><br>
                     <?php echo $_smarty_tpl->tpl_vars['libQuantiteStock']->value;?>
 
-                    <input type="number" id="stock" name="stock" value="<?php echo $_smarty_tpl->tpl_vars['valQuantiteStock']->value;?>
+                    <input type="number" name="stock" value="<?php echo $_smarty_tpl->tpl_vars['valQuantiteStock']->value;?>
 ">
                     <br><br>
                     <?php echo $_smarty_tpl->tpl_vars['libQuantiteConditionne']->value;?>
@@ -67,13 +69,13 @@ function content_589462a84f1530_12733812 ($_smarty_tpl) {
                     <br><br>
                     <?php echo $_smarty_tpl->tpl_vars['libPoidsOuNbPieces']->value;?>
 
-                    <input type="number" name="poids_piece" value="<?php echo $_smarty_tpl->tpl_vars['valPoidsOuNbPieces']->value;?>
+                    <input type="number" step="0.01" name="poids_piece" value="<?php echo $_smarty_tpl->tpl_vars['valPoidsOuNbPieces']->value;?>
 ">
                     <br><br>
                     <input type="hidden" name="gestion" value="produit">
                     <input type="submit" name="retour" value="Annuler">
-                    <input type="submit" name="<?php echo $_smarty_tpl->tpl_vars['ajouterProd']->value;?>
-" value="<?php echo $_smarty_tpl->tpl_vars['ajouter']->value;?>
+                    <input type="submit" name="<?php echo $_smarty_tpl->tpl_vars['modifierProd']->value;?>
+" value="<?php echo $_smarty_tpl->tpl_vars['modifier']->value;?>
 ">
                 </form>
             </div>

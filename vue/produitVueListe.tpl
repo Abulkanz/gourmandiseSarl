@@ -15,6 +15,12 @@
             {/if}
             <header><h1 class="center groTit">{$msg}</h1></header>
             <a class="lienAcc" href="./index.php">Accueil</a>
+            <form method="POST" action="index.php" class="center">
+                <input type="hidden" name="gestion" value="produit">
+                <input type="hidden" name="action" value="ajouter">
+                <input type='submit' name='ajouter' value='Ajouter un produit'>
+            </form>
+            <br>
             <table>
                 <tr>
                     <th>Reference</th>
@@ -39,7 +45,7 @@
                                 <input type='hidden' name='reference' value="{$Produit.reference}">
                                 <input type="hidden" name="action" value="modifier">
                             </form>
-                                <form method='POST' action='index.php'>
+                            <form method='POST' action='index.php'>
                                 <input type='submit' name='supprimer' value='S'>
                                 <input type="hidden" name="gestion" value="produit">
                                 <input type='hidden' name='reference' value="{$Produit.reference}">
@@ -50,11 +56,6 @@
                 {/foreach}
             </table>
             <br>
-            <form method="POST" action="index.php" class="center">
-                <input type="hidden" name="gestion" value="produit">
-                <input type="hidden" name="action" value="ajouter">
-                <input type='submit' name='ajouter' value='Ajouter un produit'>
-            </form>
         </div>
     </body>
 </html>

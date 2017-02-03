@@ -25,7 +25,9 @@ if (isset($_POST['ajouter'])) {
 } elseif (isset($_POST['ajouterProduit'])) {
     ajouterProduit($_POST);
 } elseif (isset($_POST['modifier'])) {
-    modifier();
+    modifier($_POST);
+} elseif (isset($_POST['modifierProduit'])) {
+    modifierProduit($_POST);
 } elseif (isset($_POST['consulter'])) {
     consulter($_POST);
 } elseif (isset($_POST['supprimer'])) {

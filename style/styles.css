@@ -6,7 +6,7 @@ html{
 }
 
 .groTit{
-    text-shadow: 4px 4px 7px lightblue;
+    text-shadow: 4px 4px 7px yellowgreen;
 }
 
 .conteneur{
@@ -16,8 +16,7 @@ html{
     background: #f5f5f5;
     padding-bottom: 1em;
     color: black;
-    border-radius: 2em 2em 2em 2em;
-    box-shadow: 0 0 3em lightblue;
+    box-shadow: 0 0 3em yellowgreen;
 }
 
 table .pUnique{
@@ -44,7 +43,7 @@ th{
     min-width: 10em;
     font: 1.4em Righteous;
     color: black;
-    text-shadow: 0.1em 0.1em lightblue;
+    text-shadow: 0.1em 0.1em yellowgreen;
 }
 
 td{
@@ -60,10 +59,10 @@ td{
 }
 
 input{
-    background-color: darkgrey;
+    background-color: black;
     border-radius: 1em;
     font: 1.4em Righteous;
-    color: lightblue;
+    color: yellowgreen;
 }
 
 select{
@@ -72,8 +71,8 @@ select{
 }
 
 input:hover{
-    background-color: lightblue;
-    color: lightgoldenrodyellow;
+    background-color: yellowgreen;
+    color: black;
 }
 
 .lienAcc {
@@ -87,21 +86,21 @@ a{
     width: 20em;
     text-align: center;
     text-decoration: none;
-    background-color: darkgrey;
+    background-color: black;
     border-radius: 1em;
     font: 1.4em Righteous;
-    color: lightblue;
+    color: yellowgreen;
 }
 
 a:hover{
-    background-color: lightblue;
-    color: lightgoldenrodyellow;
+    background-color: yellowgreen;
+    color: black;
 }
 
 input[type=number]::inner-spin-button, 
 input[type=number]::outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
 .conteneur .succes{
@@ -116,8 +115,8 @@ input[type=number]::outer-spin-button {
 }
 
 .conteneur .succes .mSucces{
-        text-align: center;
-        color: white;
+    text-align: center;
+    color: white;
 }
 
 
