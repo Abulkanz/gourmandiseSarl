@@ -2,7 +2,7 @@
 
 require_once 'modele/accueilModele.php';
 
-function listeV() {
+function liste() {
     $idRequete = listeVendeurCA();
     $idRequete1 = meillClients();
     require_once 'vue/accueilVue.php';

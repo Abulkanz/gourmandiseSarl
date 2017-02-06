@@ -6,14 +6,14 @@ $tpl = new Smarty();
 $listeProduits = array();
 $i = 0;
 
-while($row = $idRequete->fetch()){
+while($row = $reqListeProd->fetch()){
     $listeProduits[$i]['reference'] = $row['reference'];
     $listeProduits[$i]['designation'] = $row['designation'];
     $listeProduits[$i]['prix_unitaire_HT'] = $row['prix_unitaire_HT'];
     $i++;
 }
 
-$nbLignes = $idRequete->rowCount();
+$nbLignes = $reqListeProd->rowCount();
 
 $tpl->assign('msg','Liste des produits');
 $tpl->assign('nbLignes', $nbLignes);

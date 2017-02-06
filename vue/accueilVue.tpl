@@ -13,11 +13,14 @@
                 <nav class="center">
                     <form method='POST' name='gestion'>
                         <ul>
-                            <li><input class="action" type="submit" name="produit" value="Articles"></li>
-                            <li><input class="action" type="submit" name="produit" value="Clients"></li>
-                            <li><input class="action" type="submit" name="produit" value="Commandes"></li>
-                            <li><input class="action" type="submit" name="produit" value="Ligne Commande"></li>
-                            <li><input class="action" type="submit" name="produit" value="Vendeur"></li>
+                            <li>
+                                <input class="action" type="hidden" name="gestion" value="produit">
+                                <input class="action" type="submit" name="produits" value="Articles">
+                            </li>
+                            <li><input class="action" type="submit" name="clients" value="Clients"></li>
+                            <li><input class="action" type="submit" name="commandes" value="Commandes"></li>
+                            <li><input class="action" type="submit" name="lignes_commande" value="Ligne Commande"></li>
+                            <li><input class="action" type="submit" name="vendeurs" value="Vendeur"></li>
                         </ul>
                     </form>
                 </nav>
@@ -26,7 +29,7 @@
             <table>
                 <tr>
                     <th>Nom du vendeur</th>
-                    <th>Chiffre d'affaire</th>
+                    <th>Chiffre d'affaires</th>
                 </tr>
                 {foreach from=$vendeursCA item=Vendeur}
                     <tr>

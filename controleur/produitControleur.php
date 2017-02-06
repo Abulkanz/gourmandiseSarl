@@ -3,31 +3,35 @@
 require_once 'modele/produitModele.php';
 
 function liste() {
-    $idRequete = listeProduits();
+    $reqListeProd = listeProduits();
     require_once 'vue/produitVueListe.php';
 }
 
 function consulter($param) {
     $reference = $param['reference'];
-    $idRequete = consulterProduit($reference);
+    $reqConsProd = consulterProduit($reference);
     require_once 'vue/produitVueConsult.php';
 }
 
-function ajouter($param) {
+function ajouter() {
     $action = $param['action'];
     require_once 'vue/produitVueModif.php';
+    if (isset($_POST['ajouterProduit'])) {
+        
+        $reqAjout = ajouterProduit($_POST);
+    }
 }
 
 function ajouterProduit($param) {
-    $idRequete = ajouterProduitM($param);
-    $idRequete = listeProduits();
+    $reqAjoutProd = ajouterProduitExec($param);
+    $reqListeProd = listeProduits();
     require_once 'vue/produitVueListe.php';
 }
 
 function supprimer($param) {
     $reference = $param['reference'];
     $idRequete = supprimerProduit($reference);
-    $idRequete = listeProduits();
+    $reqListeProd = listeProduits();
     require_once 'vue/produitVueListe.php';
 }
 
@@ -40,6 +44,6 @@ function modifier($param) {
 
 function modifierProduit($param) {
     $idRequete = modifierProduitM($param);
-    $idRequete = listeProduits();
+    $reqListeProd = listeProduits();
     require_once 'vue/produitVueListe.php';
 }

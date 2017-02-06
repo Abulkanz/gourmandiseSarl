@@ -6,10 +6,11 @@ $tpl = new Smarty();
 $ficheProduit = array();
 $msg = 'Fiche unique';
 
-if($row = $idRequete->fetch()){
+if($row = $reqConsProd->fetch()){
 $ficheProduit['reference'] = $row['reference'];
 $ficheProduit['designation'] = $row['designation'];
 $ficheProduit['prix_unitaire_HT'] = $row['prix_unitaire_HT'];
+
 $ficheProduit['quantite'] = $row['quantite'];
 $ficheProduit['descriptif'] = $row['descriptif'];
 $ficheProduit['stock'] = $row['stock'];
