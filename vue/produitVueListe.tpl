@@ -11,13 +11,6 @@
             <header>
                 <img id="logo" src="img/gummy.png" alt=""/>
                 <p class="groTit">{$msg}</p>
-                <ul>
-                    <li></li>
-                    <li>></li>
-                    <li></li>
-                    <li></li>
-                    <img class="avatar" src="../img/avatarTest.png" alt=""/>
-                </ul>
                 <form method="POST" action="index.php" id="boutAjout">
                     <input type="hidden" name="gestion" value="produit">
                     <input type="hidden" name="action" value="ajouter">

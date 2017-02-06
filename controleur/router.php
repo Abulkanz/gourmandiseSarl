@@ -6,6 +6,7 @@ switch ($gestion) {
         break;
     case 'produit':
         require_once $gestion . 'Controleur.php';
+        liste();
         break;
     case 'vendeur':
         require_once $gestion . 'Controleur.php';
@@ -23,6 +24,7 @@ switch ($gestion) {
         echo 'Impossible !';
 }
 
+
 if (isset($_POST['ajouter'])) {
     ajouter($_POST);
 } elseif (isset($_POST['ajouterProduit'])) {
@@ -35,7 +37,7 @@ if (isset($_POST['ajouter'])) {
     consulter($_POST);
 } elseif (isset($_POST['supprimer'])) {
     supprimer($_POST);
-} elseif (isset($_POST['produits'])) {
-    liste();
+} else {
+    listeV();
 }
 
