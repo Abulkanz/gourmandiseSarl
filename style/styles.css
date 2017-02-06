@@ -19,10 +19,24 @@ header{
     background-color: dimgrey;
 }
 
+nav{
+    background-color: black;
+}
+
 #logo{
     height: 8em;
     vertical-align: middle;
     padding: 1em 0 1em 2em;
+}
+
+.groTitAcc{
+    text-shadow: 4px 4px 7px yellowgreen;
+    font-size: 3.5em;
+    margin: 0;
+    padding: 0.5em;
+    padding-left: 0.7em;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .groTit{
@@ -33,6 +47,33 @@ header{
     padding-left: 0.7em;
     display: inline-block;
     vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    border-right: 1px solid #bbb;
+    padding: 1em 4em;
+}
+
+li:first-child{
+    border-left: 1px solid #bbb;
+}
+li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font: 1.4em Righteous;
+    color: #61e5a1;
+}
+
+li a:hover{
+    color: white;
 }
 
 #boutAjout{

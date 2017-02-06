@@ -1,6 +1,9 @@
 <?php
 
 switch ($gestion) {
+    case 'accueil':
+        require_once $gestion . 'Controleur.php';
+        break;
     case 'produit':
         require_once $gestion . 'Controleur.php';
         break;
@@ -32,7 +35,7 @@ if (isset($_POST['ajouter'])) {
     consulter($_POST);
 } elseif (isset($_POST['supprimer'])) {
     supprimer($_POST);
-} else {
+} elseif (isset($_POST['produits'])) {
     liste();
 }
 
