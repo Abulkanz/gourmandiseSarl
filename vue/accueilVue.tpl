@@ -14,13 +14,36 @@
                     <form method='POST' name='gestion'>
                         <ul>
                             <li>
-                                <input class="action" type="hidden" name="gestion" value="produit">
-                                <input class="action" type="submit" name="produits" value="Articles">
+                                <form method='POST' name='gestion'>
+                                    <input class="action" type="hidden" name="gestion" value="produit">
+                                    <input class="action" type="submit" name="produits" value="Articles">
+                                </form>
                             </li>
-                            <li><input class="action" type="submit" name="clients" value="Clients"></li>
-                            <li><input class="action" type="submit" name="commandes" value="Commandes"></li>
-                            <li><input class="action" type="submit" name="lignes_commande" value="Ligne Commande"></li>
-                            <li><input class="action" type="submit" name="vendeurs" value="Vendeur"></li>
+                            <li>
+                                <form method='POST' name='gestion'>
+                                    <input class="action" type="submit" name="clients" value="Clients">
+                                </form>
+                            </li>
+                            <li>
+                                <form method='POST' name='gestion'>
+                                    <input class="action" type="submit" name="commandes" value="Commandes">
+                                </form>
+                            </li>
+                            <li>
+                                <form method='POST' name='gestion'>
+                                    <input class="action" type="submit" name="lignes_commande" value="Ligne Commande">
+                                </form>
+                            </li>
+                            <li>
+                                <form method='POST' name='gestion'>
+                                    <input class="action" type="submit" name="vendeurs" value="Vendeur">
+                                </form>
+                            </li>
+                            <li>
+                                <form method='POST' action="index.php">
+                                    <input class="action" type="submit" name="deco" value="Déconnexion">
+                                </form>
+                            </li> 
                         </ul>
                     </form>
                 </nav>

@@ -28,14 +28,14 @@ function ajouterProduitExec($param) {
     $sql = "INSERT INTO produit (designation, prix_unitaire_HT, descriptif, stock, quantite, poids_piece)
             VALUES (?, ?, ?, ?, ?, ?)";
     $reqAjoutProd = executeR($cnx, $sql, array($designation, $prix_unitaire_HT, $descriptif, $stock, $quantite, $poids_piece));
-    Header('Location: index.php?success=1');
+    Header('Location: index.php?gestion=produit&success=1');
 }
 
 function supprimerProduit($reference) {
     $cnx = getBD();
     $sql = "DELETE FROM produit WHERE reference = ?";
     $idRequete = executeR($cnx, $sql, array($reference));
-    Header('Location: index.php?success=1');
+    Header('Location: index.php?gestion=produit&success=1');
 }
 
 function modifierProduitM($param) {
@@ -53,5 +53,5 @@ function modifierProduitM($param) {
             SET designation = ? , prix_unitaire_HT = ?, descriptif = ?, stock = ?, quantite = ?, poids_piece = ?
             WHERE reference = ?";
     $idRequete = executeR($cnx, $sql, array($designation, $prix_unitaire_HT, $descriptif, $stock, $quantite, $poids_piece, $reference));
-    Header('Location: index.php?success=1');
+    Header('Location: index.php?gestion=produit&success=1');
 }

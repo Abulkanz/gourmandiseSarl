@@ -2,6 +2,14 @@
 
 require_once 'modele/produitModele.php';
 
+if (isset($_POST['ajouterProduit'])) {
+    ajouterProduit($_POST);
+}
+
+if (isset($_POST['modifierProduit'])) {
+    modifierProduit($_POST);
+}
+
 function liste() {
     $reqListeProd = listeProduits();
     require_once 'vue/produitVueListe.php';
@@ -13,13 +21,9 @@ function consulter($param) {
     require_once 'vue/produitVueConsult.php';
 }
 
-function ajouter() {
+function ajouter($param) {
     $action = $param['action'];
     require_once 'vue/produitVueModif.php';
-    if (isset($_POST['ajouterProduit'])) {
-        
-        $reqAjout = ajouterProduit($_POST);
-    }
 }
 
 function ajouterProduit($param) {
