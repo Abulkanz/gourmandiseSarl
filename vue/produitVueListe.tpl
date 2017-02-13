@@ -37,19 +37,19 @@
                         <td>{$Produit.prix_unitaire_HT}</td>
                         <td>
                             <form method='POST' action='index.php'>
-                                <input class="action" type='submit' name='consulter' value='C'>
+                                <input class="action" type='submit' name='consulter' value='Consulter'>
                                 <input type="hidden" name="gestion" value="produit">
                                 <input type='hidden' name='reference' value="{$Produit.reference}">
                                 <input type="hidden" name="action" value="consulter">
                             </form>
                             <form method='POST' action='index.php'>
-                                <input class="action" type='submit' name='modifier' value='M'>
+                                <input class="action" type='submit' name='modifier' value='Modifier'>
                                 <input type="hidden" name="gestion" value="produit">
                                 <input type='hidden' name='reference' value="{$Produit.reference}">
                                 <input type="hidden" name="action" value="modifier">
                             </form>
                             <form method='POST' action='index.php'>
-                                <input class="action" type='submit' name='supprimer' value='S'>
+                                <input class="action" type='submit' name='supprimer' value='Supprimer'>
                                 <input type="hidden" name="gestion" value="produit">
                                 <input type='hidden' name='reference' value="{$Produit.reference}">
                                 <input type="hidden" name="action" value="supprimer">

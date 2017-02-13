@@ -12,26 +12,57 @@
             <br>
             <table class="pUnique">
                 <tr>
-                    <th>Reference</th>
-                    <th>Designation</th>
-                    <th>Prix Unitaire Hors Taxe</th>
-                    <th>Quantité</th>
-                    <th>Descriptif</th>
-                    <th>Stock</th>
-                    <th>Poids par pièce</th>
+                    <th>Photo</th>
+                    <th>Info</th>
+                    <th>Détail</th>
                 </tr>
                 <tr>
+                    <td rowspan="8"><img src="img/gummy.png" alt=""/></td>
+                <tr>
+                    <td>
+                        Reference
+                    </td>
                     <td>{$reference}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Designation
+                    </td>
                     <td>{$designation}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Prix Unitaire Hors Taxe
+                    </td>
                     <td>{$prix_unitaire_HT}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Quantité
+                    </td>
                     <td>{$quantite}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Descriptif
+                    </td>
                     <td>{$descriptif}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Stock
+                    </td>
                     <td>{$stock}</td>
+                </tr>
+                <tr>
+                    <td>
+                        Poids par pièce
+                    </td>
                     <td>{$poids_piece}</td>
                 </tr>
             </table>
             <a class="lienAcc" href="./index.php">Accueil</a>
         </div>
-        
+
     </body>
 </html>

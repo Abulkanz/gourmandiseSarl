@@ -1,18 +1,47 @@
 html{
-    width: 100%;
     font-size: 62.5%;
-    margin: 0;
+}
+
+body{
     background-color: black;
+    font: 1.2em Righteous;
+    color: white;
 }
 
 .conteneur{
-    font: 1.2em Righteous;
-    width: 85%;
+    width: 94%;
     margin: auto;
     background: grey;
     padding-bottom: 1em;
-    color: white;
-    box-shadow: 0 0 3em yellowgreen;
+}
+
+#loginBox{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: dimgrey;
+    max-width: 163px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    margin: auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+ 
+
+#login label{
+    font-size: 1.6em;
+}
+
+#login label,
+#login input{
+    display: block;
+}
+
+#login input{
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    right: 3em;
+    border-radius: 3px;
+    margin: 0 auto 1em auto;
 }
 
 header{
@@ -83,11 +112,12 @@ li a:hover{
 }
 
 #boutAjout input{
+    margin-left: 85%;
     background-color: dimgrey;
-    border: none;
-    padding-left: 10em;
     font: 1.4em Righteous;
     color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
 }
 
 #boutAjout input:hover{
@@ -97,7 +127,7 @@ li a:hover{
 table .pUnique{
     margin-left: auto;
     margin-right: auto;
-    border-radius: 1em;
+    border-radius: 0.5em;
     border-style: hidden; /* hide standard table (collapsed) border */
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); /* this draws the table border  */ 
     border-collapse: collapse;
@@ -106,7 +136,7 @@ table .pUnique{
 table{
     margin: auto;
     /*    border:1px solid rgba(0, 0, 0, 0.25);*/
-    border-radius: 1em;
+    border-radius: 0.5em;
     border-style: hidden; /* hide standard table (collapsed) border */
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); /* this draws the table border  */ 
     border-collapse: collapse;
@@ -135,7 +165,7 @@ td{
 
 input.action{
     background-color: black;
-    border-radius: 1em;
+    border-radius: 0.5em;
     border:1px solid rgba(255, 255, 255, 0.65); 
     font: 1.4em Righteous;
     color: yellowgreen;
