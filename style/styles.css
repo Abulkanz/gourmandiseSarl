@@ -94,25 +94,11 @@ li:last-child{
     border-right: none;
 }
 
-li a {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font: 1.4em Righteous;
-    color: #61e5a1;
-}
-
 li a:hover{
     color: white;
 }
 
-#boutAjout{
-    display: inline-block;
-    vertical-align: middle;
-}
-
 #boutAjout input{
-    margin-left: 85%;
     background-color: dimgrey;
     font: 1.4em Righteous;
     color: white;
@@ -178,7 +164,7 @@ input.action:hover{
 }
 
 .lienAcc {
-    margin: 1em auto 1em auto;
+    margin: 0 auto;
     width: 20em;
     text-align: center;
 }
@@ -190,7 +176,7 @@ a{
     text-decoration: none;
     background-color: black;
     border:1px solid rgba(255, 255, 255, 0.65); 
-    border-radius: 1em;
+    border-radius: 5px;
     font: 1.4em Righteous;
     color: yellowgreen;
 }
@@ -199,6 +185,12 @@ a:hover{
     background-color: yellowgreen;
     border:1px solid rgba(0, 0, 0, 0.65); 
     color: black;
+}
+
+.aucRes{
+    text-align: center;
+    font-size: 1.4em;
+    color: orange;
 }
 
 .conteneur .succes{

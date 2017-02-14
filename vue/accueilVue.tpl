@@ -48,7 +48,9 @@
                     </form>
                 </nav>
             </header>
+            <br>
             <a class="lienAcc" href="./index.php">Accueil</a>
+            <br>
             <table>
                 <tr>
                     <th>Nom du vendeur</th>

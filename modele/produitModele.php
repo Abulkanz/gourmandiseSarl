@@ -9,6 +9,15 @@ function listeProduits() {
     return $reqListeProd;
 }
 
+function rechercherProduits($param) {
+    $cnx = getBD();
+    $objetRech = "%" . $param['objRech'] . "%";
+    $choix = $param['selection'];
+    $sql = 'SELECT * FROM produit WHERE reference LIKE "' . $objetRech . '" OR designation LIKE "' . $objetRech . '" OR prix_unitaire_HT LIKE "' . $objetRech . '" ORDER BY ' . $choix . '';
+    $idRequete = executeR($cnx, $sql, array($objetRech, $objetRech, $choix));
+    return $idRequete;
+}
+
 function consulterProduit($reference) {
     $cnx = getBD();
     $sql = "SELECT * FROM produit WHERE reference = ?";
@@ -39,7 +48,7 @@ function supprimerProduit($reference) {
 }
 
 function modifierProduitM($param) {
-    
+
     $designation = $param['designation'];
     $prix_unitaire_HT = $param['prix_unitaire_HT'];
     $descriptif = $param['descriptif'];
