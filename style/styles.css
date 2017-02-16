@@ -27,6 +27,10 @@ body{
     transform: translateY(-50%);
 }
  
+.mAuto{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #login label{
     font-size: 1.6em;

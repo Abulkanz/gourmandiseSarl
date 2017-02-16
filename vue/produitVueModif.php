@@ -11,12 +11,32 @@ $tpl->assign('libProduitPoidsOuLot', 'Descriptif :');
 $tpl->assign('libQuantiteStock', 'Stock :');
 $tpl->assign('libQuantiteConditionne', 'Quantité');
 $tpl->assign('libPoidsOuNbPieces', 'Poids pièce');
-$tpl->assign('jsAlertStock', "<script>
-                                    var valStock = document.getElementById('stock').value;
-                                    if (valStock === '0'){
-                                    alert('Stock à zéro');
+$tpl->assign('jScript', "<script>
+                            function validForm() {
+                                var valStock = document.forms['formAjMod']['stock'].value;
+                                if (valStock == '' || valStock == 0 || valStock == undefined) {
+                                    var choix = confirm('Attention, le stock est à zéro');
+                                    if (choix === true) {
+                                        return true;
+                                    } else {
+                                        return false;
                                     }
-                              </script>");
+                                }
+                            }
+
+                            function desactQte() {
+                                var desc = document.getElementById('sDesc');
+                                var choix = desc.options[desc.selectedIndex].value;
+                                if (choix === 'G') {
+                                    document.getElementById('pPiece').disabled = true;
+                                    document.getElementById('pPiece').style.cursor = 'not-allowed';
+                                    document.getElementById('pPiece').value = '0';
+                                } else {
+                                    document.getElementById('pPiece').disabled = false;
+                                    document.getElementById('pPiece').style.cursor = 'default';
+                                }
+                            }
+                        </script>");
 
 
 switch ($action) {

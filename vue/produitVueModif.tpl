@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style/styles.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
+    <body onload='desactQte()'>
         <div class="conteneur">
             <h1 class="center groTit">{$titre}</h1>
             <div style="margin: auto auto;">
-                <form method="POST" action="index.php">
+                <form method="POST" name="formAjMod" onsubmit="return validForm()" action="index.php">
                     {$inputRef}
                     {$libDesignation}
                     <br>
@@ -22,8 +22,8 @@
                     <br><br>
                     {$libProduitPoidsOuLot}
                     <br>
-                    <select class="descriptif" name="descriptif">
-                        <option selected="selected" value="G">{$libGrammes}</option>
+                    <select id="sDesc" class="descriptif" onchange="desactQte()" name="descriptif">
+                         <option selected="selected" value="G">{$libGrammes}</option>
                         <option value="P">{$libPieces}</option>
                     </select>
                     <br><br>
@@ -37,7 +37,7 @@
                     <br><br>
                     {$libPoidsOuNbPieces}
                     <br>
-                    <input type="number" step="0.01" name="poids_piece" value="{$valPoidsOuNbPieces}">
+                    <input id="pPiece" type="number" step="0.01" name="poids_piece" value="{$valPoidsOuNbPieces}">
                     <br><br>
                     <input type="hidden" name="gestion" value="produit">
                     <input class="action" type="submit" name="retour" value="Annuler">
@@ -45,6 +45,6 @@
                 </form>
             </div>
         </div>
+        {$jScript}
     </body>
-    {$jsAlertStock}
 </html>

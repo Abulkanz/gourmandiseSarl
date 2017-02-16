@@ -61,7 +61,11 @@
                     <td>{$poids_piece}</td>
                 </tr>
             </table>
-            <a class="lienAcc" href="./index.php">Accueil</a>
+                <br>
+            <form method='POST' name='gestion' class="center">
+                <input class="action" type="hidden" name="gestion" value="produit">
+                <input class="action" type="submit" name="produits" value="Retour">
+            </form>
         </div>
 
     </body>

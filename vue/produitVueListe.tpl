@@ -66,7 +66,7 @@
                                 <input type="text" name="objRech" placeholder="Rechercher">
                                 <input type="hidden" name="gestion" value="produit">
                                 <input type="hidden" name="action" value="rechercher">
-                                <input type="submit" name="rechercherProduit" value="->">
+                                <input class="action" type="submit" name="rechercherProduit" value="->">
                                 <label for="tri">Trier par</label>
                                 <select id="tri" name="selection">
                                     <option selected="selected" value="designation">Designation</option>
@@ -81,6 +81,7 @@
             </header>
 
             {if $success eq '1'}
+                <br>
                 <div class="succes"><h3 class="mSucces">Bravo</h3></div>
             {else}
                 {$aucRes}
