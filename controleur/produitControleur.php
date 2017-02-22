@@ -11,7 +11,7 @@ if (isset($_POST['modifierProduit'])) {
 }
 
 if (isset($_POST['rechercherProduit'])){
-    $idRequete = rechercherProduits($_POST);
+    $reqListeProd = rechercherProduits($_POST);
     require_once 'vue/produitVueListe.php';
 }
 
